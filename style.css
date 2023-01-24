@@ -1,0 +1,55 @@
+html, body{
+    margin: 10px;
+}
+.game-set{
+    width: 1800px;
+    height: 950px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    border: solid;
+}
+    
+.player1{
+    grid-area: 1 / 1 / 4 / 2;
+    border: solid;
+}
+.current1{
+    grid-area: 4 / 1 / 7 / 2;
+    border: solid;
+}
+.newgame{
+    grid-area: 1 / 2 / 2 / 3;
+    border: solid;
+    align-content: center;
+}
+.dice{
+    grid-area: 2 / 2 / 4 / 3;
+    border: solid;
+}
+.rolldice-hold{
+    grid-area: 5 / 2 / 7 / 3;
+    border: solid;
+    align-content: center;
+    justify-content: space-between;
+}
+.player2{
+    grid-area: 1 / 3 / 4 / 4;
+    border: solid;
+}
+.current2{
+    grid-area: 4 / 3 / 7 / 4;
+    border: solid;
+}
+.div8{
+    grid-area: 4 / 2 / 5 / 3;
+    border: solid;
+}
+.btn{
+    margin: 20px;
+    padding: 20px;
+    margin-top: 50px;
+
+}
