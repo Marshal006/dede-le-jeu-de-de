@@ -10,34 +10,36 @@
           crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css">
+    
     <title>DéDé Le Jeu de Dé</title>
 </head>
 <body>
     <div class="container">
         <div class="player-content">
-            <div class="player">PLAYER 1</div>
-            <div class="score-total">43</div>
+            <div class="player">PLAYER 1 <img src="./images/rec.png" alt="icon" class="icon" id="on-1"></div>
+            
+            <div class="score-total" id="score-total-1">43</div>
             <div class="current-box">Current
-                <div class="score">11</div>
+                <div class="score" id="current-score-1">11</div>
             </div>
         </div>
 
         <div class="game-set">
             
-            <button class="btn newgame"><img src="./images/add.png" alt="icon" class="icon"> NEW GAME</button>
-            <img class="dice" src="./images/dice2.png">
-            <button class="btn roll"><img src="./images/sync.png" alt="icon" class="icon"> DICE</button>
+            <button class="btn newgame" id="newgame"><img src="./images/add.png" alt="icon" class="icon"> NEW GAME</button>
+            <img class="dice" src="./images/dice2.png" id="dice">
+            <button class="btn roll" id="roll-dice"><img src="./images/sync.png" alt="icon" class="icon"> ROLL DICE</button>
             <br>
-            <button class="btn hold"><img src="./images/download-file.png" alt="icon" class="icon"> HOLD</button>
+            <button class="btn hold" id="hold"><img src="./images/download-file.png" alt="icon" class="icon"> HOLD</button>
         </div>
 
 
 
         <div class="player-content">
-            <div class="player">PLAYER 2</div>
-            <div class="score-total">72</div>
+            <div class="player">PLAYER 2 <img src="./images/rec.png" alt="icon" class="icon" id="on-2"></div>
+            <div class="score-total" id="score-total-2">72</div>
             <div class="current-box">Current
-                <div class="score">0</div>
+                <div class="score" id="current-score-2">0</div>
             </div>
         </div>
 
@@ -50,5 +52,7 @@
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
             crossorigin="anonymous">
     </script>
+    <script src="./script.js" type="text/javascript"></script>
+    
 </body>
 </html>
