@@ -1,4 +1,4 @@
-
+// déclaration des variables
 const ScoreTotal1 = document.getElementById('score-total-1');
 const current1 = document.getElementById('current-score-1');
 const ScoreTotal2 = document.getElementById('score-total-2');
@@ -14,17 +14,21 @@ let currentPlayer = 1;
 
 let gameStart = true;
 
+// fonction changement de joueur
 function switchPlayer() {
   currentPlayer = currentPlayer === 1 ? 2 : 1;
   playOn1.style.display = currentPlayer === 1 ? "inline" : "none";
   playOn2.style.display = currentPlayer === 2 ? "inline" : "none";
 };
 
+
+// fonction remise du score current à 0
 function resetCurrentScore() {
   current1.innerText = "0";
   current2.innerText = "0";
 };
 
+// fonction de mise à jour du score total des joueurs
 function updateTotalScore() {
   const currentScore = currentPlayer === 1 ? current1 : current2;
   const totalScore = currentPlayer === 1 ? ScoreTotal1 : ScoreTotal2;
@@ -32,6 +36,8 @@ function updateTotalScore() {
   totalScore.innerText = parseInt(totalScore.innerText) + score;
 };
 
+
+// fonction pour en cas de victoire d'un des joueurs
 function checkWin() {
   const totalScore = currentPlayer === 1 ? ScoreTotal1 : ScoreTotal2;
   if (parseInt(totalScore.innerText) >= 100) {
@@ -40,6 +46,7 @@ function checkWin() {
   }
 };
 
+// action sur bouton newgame
 buttonStart.addEventListener('click', function(){
     ScoreTotal1.innerText = 0;
     current1.innerText = 0;
@@ -52,6 +59,8 @@ buttonStart.addEventListener('click', function(){
     playOn2.style.display = "none";
   });
 
+
+// action sur bouton roll dice  
 roll.addEventListener('click', function() {
   if (gameStart) {
     const diceNumber = Math.floor(Math.random() * 6) + 1;
@@ -66,6 +75,8 @@ roll.addEventListener('click', function() {
   }
 });
 
+
+// action sur bouton hold
 hold.addEventListener('click', function() {
   if (gameStart) {
     updateTotalScore();
