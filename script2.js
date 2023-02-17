@@ -1,4 +1,3 @@
-
 const ScoreTotal1 = document.getElementById('score-total-1');
 const current1 = document.getElementById('current-score-1');
 const ScoreTotal2 = document.getElementById('score-total-2');

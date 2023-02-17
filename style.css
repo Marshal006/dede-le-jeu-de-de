@@ -9,7 +9,7 @@ html, body{
     border: solid;
     display: flex;
 }
-.player-content{
+.player-1-content, .player-2-content{
     flex-basis: 50%;
     display: flex;
     flex-direction: column;
@@ -59,4 +59,9 @@ html, body{
     width: auto;
     align-self: center;
 }
-  
+.run{
+    height: 20px;
+    width: auto;
+    align-self: center;
+    display: none;
+  }
